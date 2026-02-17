@@ -1,0 +1,41 @@
+.form-with-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-3xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 80px;
+}
+
+.form-illustration {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+    order: 1;
+}
+
+.form-card {
+    order: 2;
+    flex-shrink: 0;
+    max-width: 550px;
+    width: 100%;
+}
+
+@media (max-width: 968px) {
+    .form-with-illustration {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        justify-content: center;
+        padding-right: var(--spacing-md);
+    }
+    
+    .form-illustration {
+        width: 180px;
+        order: 1;
+    }
+    
+    .form-card {
+        order: 2;
+    }
+}
