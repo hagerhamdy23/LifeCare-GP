@@ -1,0 +1,63 @@
+.header {
+    padding: var(--spacing-md) var(--spacing-xl);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 0 0 auto;
+}
+
+.page-title {
+    color: var(--white);
+    font-size: var(--font-3xl);
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    transition: var(--transition);
+    flex: 0 0 auto;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.join-text {
+    color: var(--white);
+    font-size: var(--font-base);
+    white-space: nowrap;
+}
+
+.login-btn-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.login-btn-header:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 157, 219, 0.3);
+}

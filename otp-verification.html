@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Care - التحقق من OTP</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/otp.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-right"></div>
+        <a href="index.html"><h1 class="page-title">الصفحة الرئيسية</h1></a>
+        <a href="index.html"><img src="images/logo.png" alt="Life Care" class="logo"></a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="form-card otp-card">
+            <!-- Icon -->
+            <div class="alert-icon">
+                <div class="icon-circle">
+                    <span class="exclamation">!</span>
+                </div>
+            </div>
+
+            <h2 class="form-title">ادخل رمز ال OTP</h2>
+            
+            <p class="otp-description">
+                ادخل الرمز من البريد الإلكتروني لإعادة تعيين كلمه السر
+            </p>
+            
+            <form id="otpForm">
+                <!-- OTP Input Boxes -->
+                <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input" data-index="0">
+                    <input type="text" maxlength="1" class="otp-input" data-index="1">
+                    <input type="text" maxlength="1" class="otp-input" data-index="2">
+                    <input type="text" maxlength="1" class="otp-input" data-index="3">
+                </div>
+
+                <button type="submit" class="submit-btn">تأكيد</button>
+
+                <p class="resend-text">لم يصلني الرمز ؟ <a href="#" class="resend-link">ارسال رمز اخر</a></p>
+            </form>
+
+            <a href="#" class="back-to-login" onclick="goBack(); return false;">
+                <span class="arrow">&#x2039;</span> رجوع لصفحة التسجيل
+            </a>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/otp.js"></script>
+</body>
+</html>

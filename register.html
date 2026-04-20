@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Care - التسجيل</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-right"></div>
+        <h1 class="page-title">الصفحة الرئيسية</h1>
+        <img src="images/logo.png" alt="Life Care" class="logo">
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="form-card">
+            <h2 class="form-title">تسجيل دخول العيادة</h2>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label">الاسم</label>
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        placeholder="الاسم"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">اسم العيادة</label>
+                    <input 
+                        type="text" 
+                        class="form-input" 
+                        placeholder="اسم العيادة"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">البريد الإلكتروني</label>
+                    <input 
+                        type="email" 
+                        class="form-input" 
+                        placeholder="example@example.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">كلمة السر</label>
+                    <input 
+                        type="password" 
+                        class="form-input" 
+                        placeholder="••••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">تأكيد كلمة السر</label>
+                    <input 
+                        type="password" 
+                        class="form-input" 
+                        placeholder="••••••••••"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">رقم الهاتف</label>
+                    <input 
+                        type="tel" 
+                        class="form-input" 
+                        placeholder="011••••••••"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">تسجيل</button>
+
+                <div class="register-link">
+                    هل تمتلك حساب؟ <a href="login.html">تسجيل دخول</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+.dashboard-main {
+    flex: 1;
+    padding: var(--spacing-xl);
+    overflow: hidden;
+}
+
+.bookings-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: var(--spacing-lg);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    height: calc(100vh - 110px - (var(--spacing-xl) * 2));
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-shell {
+    width: min(620px, 92%);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.28);
+    position: relative;
+}
+
+.calendar-head {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    direction: ltr;
+}
+
+.calendar-day {
+    margin-top: 6px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    direction: ltr;
+}
+
+.calendar-grid {
+    margin-top: 14px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.calendar-cell {
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.75);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.calendar-cell:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.calendar-cell.is-selected {
+    background: rgba(13, 157, 219, 0.25);
+    border-color: rgba(13, 157, 219, 0.35);
+}
+
+.booking-modal {
+    position: absolute;
+    inset: 95px 40px 40px;
+    background: rgba(30, 30, 30, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    padding: 24px 26px 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: none;
+}
+
+.booking-modal.is-open {
+    display: block;
+}
+
+.booking-title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.booking-line {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.booking-close {
+    height: 44px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: linear-gradient(180deg, #3fb1ff, #0d9ddb);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--transition);
+    display: block;
+    margin: 22px auto 0;
+    width: 180px;
+}
+
+.booking-close:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(13, 157, 219, 0.25);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+
+    .dashboard-main {
+        padding: var(--spacing-md);
+    }
+
+    .bookings-card {
+        height: auto;
+        min-height: auto;
+        padding: var(--spacing-md);
+    }
+
+    .calendar-shell {
+        padding: 16px;
+    }
+
+    .booking-modal {
+        inset: 88px 16px 16px;
+    }
+}

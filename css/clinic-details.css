@@ -1,0 +1,139 @@
+/* Clinic Details Page Styles */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.details-card {
+    background: rgba(30, 90, 120, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* To keep the circle decoration inside bounds */
+}
+
+/* Background Circle Decoration */
+.card-decoration {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* User Icon */
+.profile-icon {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    margin-bottom: var(--spacing-xl);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+/* Form Styles */
+.details-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    z-index: 1;
+}
+
+.form-row.two-cols {
+    display: flex;
+    flex-direction: row; /* Because of RTL, the first element (الاسم) visually appears on the right */
+    gap: var(--spacing-md);
+}
+
+.form-row.two-cols .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--white);
+    font-size: var(--font-md);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--white);
+    font-size: var(--font-md);
+    text-align: center;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input.ltr-input {
+    direction: ltr; /* Keeps email correct */
+}
+
+/* Form Buttons */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+}
+
+.back-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 0;
+    border-radius: 25px;
+    font-size: var(--font-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 140px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 5px 15px rgba(13, 157, 219, 0.4);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,64 @@
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+    color: var(--white);
+    font-size: var(--font-sm);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    text-align: right;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--white-30);
+    border-radius: var(--radius-sm);
+    background: var(--white-20);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    font-size: var(--font-md);
+    outline: none;
+    transition: var(--transition);
+    direction: rtl;
+}
+
+.form-input::placeholder {
+    color: var(--white-60);
+}
+
+.form-input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.forgot-password {
+    color: var(--white-80);
+    font-size: var(--font-xs);
+    text-align: center;
+    margin: var(--spacing-sm) 0;
+    display: block;
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    color: var(--white);
+}
+
+.register-link {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    color: var(--white-80);
+    font-size: var(--font-sm);
+}
+
+.register-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.register-link a:hover {
+    color: var(--primary-hover);
+}

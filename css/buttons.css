@@ -1,0 +1,48 @@
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 157, 219, 0.3);
+}
+
+.account-type-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    font-size: var(--font-lg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 25px;
+}
+
+.account-type-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 157, 219, 0.3);
+}
+
+.account-type-btn:last-child {
+    margin-bottom: 0;
+}
+
+.account-type-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,272 @@
+/* Pharmacy Dashboard Specific Styles */
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    gap: var(--spacing-md);
+    height: 100%;
+    margin-right: 20px; /* Space for the sidebar */
+}
+
+/* Global Search (Top Center) */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto 20px auto;
+    margin-right: 50px;
+}
+
+.global-search {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    color: var(--white);
+    font-size: var(--font-md);
+    outline: none;
+    transition: var(--transition);
+}
+
+.global-search::placeholder {
+    color: var(--white-60);
+}
+
+.global-search:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.search-wrapper .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--white-80);
+    pointer-events: none;
+}
+
+/* Main Card */
+.prescriptions-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-height: 500px;
+}
+
+/* Card Header */
+.prescriptions-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: var(--spacing-xl);
+}
+
+.prescriptions-title {
+    background: rgba(0, 50, 70, 0.6);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-size: var(--font-lg);
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Table Styles */
+.prescriptions-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr 2fr 1fr 1fr;
+    padding: 0 20px 15px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+.header-cell {
+    color: var(--white);
+    font-size: var(--font-md);
+    font-weight: 600;
+    text-align: center;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr 2fr 1fr 1fr;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px 20px;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.table-row:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    color: var(--white);
+    font-size: var(--font-sm);
+    text-align: center;
+}
+
+.action-cell {
+    display: flex;
+    justify-content: center;
+}
+
+.view-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: var(--font-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.view-btn:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 2px 8px rgba(13, 157, 219, 0.4);
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-card {
+    position: relative;
+    background: rgba(30, 110, 150, 0.7);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-title {
+    color: var(--white);
+    font-size: var(--font-2xl);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modal-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.modal-patient-name,
+.modal-order-id {
+    color: var(--white);
+    font-size: var(--font-lg);
+    font-weight: 500;
+}
+
+.modal-action-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: var(--font-md);
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-prescription-btn {
+    background: #0d9ddb;
+}
+
+.view-prescription-btn:hover {
+    background: #0b8ac4;
+    box-shadow: 0 4px 10px rgba(13, 157, 219, 0.3);
+}
+
+.accept-btn {
+    background: #28a745;
+}
+
+.accept-btn:hover {
+    background: #218838;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.reject-btn {
+    background: #dc3545;
+}
+
+.reject-btn:hover {
+    background: #c82333;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}

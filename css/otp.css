@@ -1,0 +1,117 @@
+.otp-card {
+    text-align: center;
+    max-width: 450px;
+}
+
+.alert-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.exclamation {
+    color: var(--white);
+    font-size: 70px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+
+.otp-card .form-title {
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-xl);
+}
+
+.otp-description {
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: var(--spacing-lg);
+    direction: ltr;
+}
+
+.otp-input {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    outline: none;
+    transition: var(--transition);
+}
+
+.otp-input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.otp-card .submit-btn {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.resend-text {
+    color: var(--white);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.resend-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.resend-link:hover {
+    color: var(--primary-hover);
+}
+
+.back-to-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--white);
+    font-size: 15px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.back-to-login:hover {
+    color: var(--primary-color);
+}
+
+.arrow {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}

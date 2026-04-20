@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Care - تفاصيل العيادة</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/clinic-details.css">
+</head>
+<body>
+    <div class="background-container"></div>
+
+    <header class="header">
+        <div class="header-right"></div>
+        <h1 class="page-title">تفاصيل العيادة</h1>
+        <a href="index.html"><img src="images/logo.png" alt="Life Care" class="logo"></a>
+    </header>
+
+    <main class="main-container">
+        <div class="details-card">
+            <div class="card-decoration"></div>
+            
+            <div class="profile-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            
+            <form class="details-form">
+                <div class="form-row two-cols">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" value="يارا محمد" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>اسم الصيدلية</label>
+                        <input type="text" value="صيدليه المعداوي" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>البريد الالكتروني</label>
+                    <input type="text" dir="ltr" class="ltr-input" value="yaramohamed43@gmail.com" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>رقم تليفون</label>
+                    <input type="text" value="0116543290" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>اخر ظهور</label>
+                    <input type="text" value="1-1- 2026 1 صباحاً" readonly>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="back-btn" onclick="history.back()">رجوع</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
